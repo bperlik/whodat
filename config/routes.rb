@@ -1,10 +1,12 @@
 Whodat::Engine.routes.draw do
- #  get 'users/new'
- #  get 'users/create'
- #  get 'users/destroy'
 
-  resources :users
+  root to: 'whodat#index'
 
-  root '/welcome#index'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  get '/users' => 'users#create'
 
 end
