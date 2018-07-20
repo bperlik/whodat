@@ -13,7 +13,7 @@ module Whodat
         redirect_to root_path, notice: 'Successfully created user.'
       else
         flash[:error] = 'An error occurred. Please try again.'
-        redirect_to '/signup'
+        redirect_to new_user_path
       end
     end
 

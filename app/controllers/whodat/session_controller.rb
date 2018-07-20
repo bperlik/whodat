@@ -11,11 +11,11 @@ module Whodat
       user = Whodat::User.find_by( email: session_ params[:email])
       if user && user.authenticate(session_params[:password])
         sign_in(user)
-        redirect_to dashboard_path, notice: "Successfully logged in"
+        redirect_to new_session_path, notice: "Successfully logged in"
       else
         flash[:notice] = "Invalid email or password. Please try again."
-        render :new
-    end
+        render dashboard_path
+    end:
 
     def destroy
       sign_out
