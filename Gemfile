@@ -15,4 +15,5 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 #
 
+gem 'jquery'
 gem 'jquery-rails'
