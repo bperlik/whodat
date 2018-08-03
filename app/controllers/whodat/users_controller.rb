@@ -13,7 +13,7 @@ module Whodat
         create_session(@user)
         redirect_to root_path
       else
-        flash.now[:alert] = "An error occurred. Please try again."
+        flash[:notice] = "An error occurred. Please try again."
         render :new
       end
     end

@@ -1,5 +1,9 @@
 <h2>Create your account</h2>
 
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
   <div class="row">
     <div class="col-md-8">
       <%= form_for @user do |f|  %>
