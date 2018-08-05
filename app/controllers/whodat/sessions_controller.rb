@@ -6,31 +6,35 @@ require_dependency "whodat/application_controller"
      # remember to use helpers, the include statement is in application controller
 
       def new
-        redirect_to dashboard_path if user_signed_in?
+       #  if user_signed_in?
+       #    flash[:notice] = "You're already signed in."
+       #    redirect_to root_path
+       #  end
       end
 
       def create
         user = Whodat::User.find_by( email: session_params[:email])
         if user && user.authenticate(session_params[:password])
-         create_session(user)
-         flash[:notice] = "Welcome, #{user.name}!"
-         redirect_to root_path
+          create_session(user)
+          flash[:notice] = "Welcome, #{user.name}!"
+          redirect_to root_path
         else
           flash[:notice] = "Invalid email or password. Please try again."
-         render :new
+          render :new
+        end
       end
 
-     def destroy
-       destroy_session(current_user)
-       flash[:notice] = "You've been signed out, come back soon."
-       redirect_to root_path
+      def destroy
+        destroy_session(current_user)
+        flash[:notice] = "You've been signed out, come back soon."
+        redirect_to root_path
       end
 
       private
 
       def session_params
-        params.require(:user).permit( :email, :password)
+        params.require(:session).permit(:name, :email, :password )
       end
     end
   end
-end
+
