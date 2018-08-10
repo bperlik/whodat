@@ -6,12 +6,12 @@ require "whodat/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "whodat"
-  s.version     = Whodat::VERSION
+  s.version     = "0.1.0"
   s.authors     = ["Barbara Perlik"]
   s.email       = ["barbperlik@gmail.com"]
   s.homepage    = "https://github.com/bperlik/whodat"
-  s.summary     = "A simple authentication gem for Rails projects"
-  s.description = "A simple authentication gem built on a Rails engine using BCrypt"
+  s.summary     = "A simple authentication solution for Rails using BCrypt"
+  s.description = "A simple authentication solution for development in Rails using BCrypt"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
