@@ -1,16 +1,15 @@
 # Whodat
-Instead of using a complex authentication for developement or
- a simple Rails project, I built a simple authentication on a
- Rails engine using bcrypt for encryption
+Instead of using a complex authentication for development or
+ a simple Rails project, I built a simple authentication gem for Rails using BCrypt.
 
 ## Usage
 
-add inside app config/routes.rb file:
+1. Add inside app config/routes.rb file
 ```
 mount EngineName: : Engine => “/enginename”
 ```
 
-be sure to rake the engine migration over to the app and then
+2. Be sure to rake the engine migration over to the app and then
 rake the the app migration
 ```
 rake engineName:install:migrate
