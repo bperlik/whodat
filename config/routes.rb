@@ -4,6 +4,7 @@ Whodat::Engine.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  # root ::Rails.application.class.parent.name.index
   root 'dashboard#index'
 
   get 'dashboard/index' => 'dashboard#index', as: :dashboard
