@@ -19,14 +19,8 @@ load 'rails/tasks/engine.rake'
 
 load 'rails/tasks/statistics.rake'
 
-require 'bundler/gem_tasks'
-
-require 'rake/testtask'
-
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must gem install bundler and bundle install to run rake tasks'
 end
-
-task default: :test
