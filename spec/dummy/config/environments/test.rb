@@ -43,4 +43,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # access to engine path routing helpers
+  # config.include <RailsEngine>::Engine.routes.url_helpers
 end

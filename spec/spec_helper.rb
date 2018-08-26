@@ -93,4 +93,13 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # Added to use Rspec for testing
+  # ENV["RAILS_ENV"] ||= 'rspec'
+  # require File.expand_path("../dummy/application.rb", __FILE__)
+  # ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../')
+  # This will include the routing helpers in the specs so that we can use
+  # <engine>_path, etc., to get to the routes.
+  # config.include <RailsEngine>::Engine.routes.url_helpers
+
 end

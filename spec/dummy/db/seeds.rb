@@ -5,14 +5,14 @@ Whodat::User.create!(
     password_confirmation: "testtest"
    )
 
-   20.times do |n|
+  20.times do |n|
     name  = Faker::Name.name
     email = "whodat-#{n+1}@engine.org"
     password = "password"
     Whodat::User.create!(name:  name,
-                 email: email,
-                 password:              password,
-                 password_confirmation: password)
+              email: email,
+              password:              password,
+              password_confirmation: password)
   end
 
 users = Whodat::User.all 

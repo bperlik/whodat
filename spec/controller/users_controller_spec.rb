@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   
-    let(:new_user_attributes) do
+    let(:current_
+      user_attributes) do
       {
           name: "Testuser",
           email: "test@test.io",
