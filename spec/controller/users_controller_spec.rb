@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Whodat::UsersController, type: :controller do
+RSpec.describe Whodat::UsersController, :type => :controller do
   routes { Whodat::Engine.routes }
 
    #create a hash of attributes to use throughout spec
@@ -13,16 +13,6 @@ RSpec.describe Whodat::UsersController, type: :controller do
     }
   end
 
-  # create a user to use throughout spec
-  let(:user) do
-    Whodat::User.create!(
-      name: "TestName",
-      email: "testemail@test.io",
-      password: "password",
-      password_confirmation: "password"
-    )
-  end
-
   # add tests for new for response & instantiate a new user
   describe "GET new" do
     it "returns http success" do
@@ -32,22 +22,24 @@ RSpec.describe Whodat::UsersController, type: :controller do
 
     it "instantiates a new user" do
       get :new
-      expect(assigns(:user)).to_not be_nil
+      expect(assigns(:user)).to be_a_new(User)
     end
   end
 
   # Test for http success when issuing post with new_user_attributes
   describe "POST create" do
     it "returns an http redirect" do
-      post :create, user: new_user_attributes
-      expect(response).to have_http_status(:redirect)
+      # post :create, user: new_user_attributes
+      #expect(response).to redirect_to(root_path)
+      my_user = Whodat.create(:new_user_attributes => "my_user")
+      expect(response).to redirect_to(root_path)
     end
 
     # Test that users table increases by one
     it "creates a new user" do
       expect{
         post :create, user: new_user_attributes
-       }.to change(Whodat::User, :count).by(1)
+       }.to change(User, :count).by(1)
     end
 
     # Test that user.name is set to new name
@@ -77,7 +69,7 @@ RSpec.describe Whodat::UsersController, type: :controller do
     # Test that the session opens for user
     it "logs the user in after sign up" do
       post :create, user: new_user_attributes
-      expect(session[:user_id]).to eq assigns(:user).id
+      expect(session[user_id]).to eq assigns(:user).id
     end
   end
 end

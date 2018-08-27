@@ -102,4 +102,7 @@ RSpec.configure do |config|
   # <engine>_path, etc., to get to the routes.
   # config.include <RailsEngine>::Engine.routes.url_helpers
 
+  # added Aug27
+  require 'rails-controller-testing'
+
 end

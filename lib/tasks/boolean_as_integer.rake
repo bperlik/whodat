@@ -1,8 +1,8 @@
 desc 'see comment below for error message'
-task :converting_boolean_to_integer
+  task :converting_boolean_to_integer do
     ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
     ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
-end
+  end
 
 # DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
 # set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
