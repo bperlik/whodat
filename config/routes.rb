@@ -1,5 +1,8 @@
 Whodat::Engine.routes.draw do
 
+  get 'users/index'
+  get 'users/new'
+  get 'users/create'
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]

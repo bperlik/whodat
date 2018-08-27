@@ -7,7 +7,9 @@ module Whodat
     end
 
     def create
+
       @user = User.new(user_params)
+      
       if @user.save
         flash[:notice] = "Welcome, #{@user.name}!"
         # create_session(@user)
@@ -16,12 +18,6 @@ module Whodat
         flash[:notice] = "An error occurred. Please try again."
         render :new
       end
-    end
-
-    def update
-    end
-
-    def destroy
     end
 
 private
