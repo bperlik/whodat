@@ -12,7 +12,7 @@ module Whodat
       
       if @user.save
         flash[:notice] = "Welcome, #{@user.name}!"
-        # create_session(@user)
+        create_session(@user)
         redirect_to root_path
       else
         flash[:notice] = "An error occurred. Please try again."

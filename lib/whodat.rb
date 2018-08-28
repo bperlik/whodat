@@ -1,5 +1,6 @@
 require "whodat/engine"
 
-module Whodat
 
+module Whodat
+  
 end
