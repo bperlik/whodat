@@ -13,7 +13,7 @@ require_dependency "whodat/application_controller"
         if user && user.authenticate(session_params[:password])
           create_session(user)
           flash[:notice] = "Welcome, #{user.name}!"
-          redirect_to main_app.root_path
+          redirect_to root_path
         else
           flash[:notice] = "Invalid email or password. Please try again."
           render :new
