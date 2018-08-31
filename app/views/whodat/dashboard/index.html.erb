@@ -12,7 +12,8 @@
     <li> <%= link_to 'Logout', session_path(current_user), data: {confirm: "Are you sure?" }, method: :delete %> </li>
   <% end %>
 
-  <li> <%= link_to 'Main app', root_path %> </li>
+  <li> <%= link_to 'Dashboard', root_path %> </li>
+  <li> <%= link_to 'Main app', main_app.root_path %> </li>
 
 </ul>
 

@@ -46,4 +46,8 @@ Rails.application.configure do
 
   # access to engine path routing helpers
   # config.include <RailsEngine>::Engine.routes.url_helpers
+
+  # load Blog::Engine with highest priority, followed by application and other railties
+  # config.railties_order = [:main_app, Blog::Engine, :all]
+
 end
