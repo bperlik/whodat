@@ -1,6 +1,6 @@
 # Whodat
 
-[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)(https://github.com/bperlik/whodat)]
+![Travis (.org)](https://travis-ci.org/bperlik/whodat.svg?branch=master)
 
 Instead of using a complex authentication for development or
  a simple Rails project, I built a simple authentication gem for Rails using BCrypt.
