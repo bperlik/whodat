@@ -1,14 +1,3 @@
 language: ruby
 rvm:
   - 2.5.1
-
-before_script: 
-  -	bin/rails db:create
-  -	bin/rails db:migrate
-  -	bin/rails db:test:prepare
-
-
-# script: bundle exec rake spec
-
-after_script:
-  -	bin/rails db:rollback
