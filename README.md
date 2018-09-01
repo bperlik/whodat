@@ -38,7 +38,7 @@ $ gem install whodat
 
 ## How to contribute to Whodat
 
-##Code of Conduct
+## Code of Conduct
 
 ### Our Pledge
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
@@ -98,14 +98,17 @@ members of the project's leadership.
 ### Attribution
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
 available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+
 [homepage]: https://www.contributor-covenant.org
 
-## Did you find a bug?
+## How To Help
+
+### Did you find a bug?
 *	Do not open up a GitHub issue if the bug is a dependency security vulnerability.
 *	Ensure the bug was not already reported by searching on GitHub under Issues.
 *	If you're unable to find an open issue addressing the problem, open a new one. Be sure to include a title and clear description, as much relevant information as possible, what was expected, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
 
-## How to help
+### How to contribute
 *	Step 1: Find an issue you'd like to work on that hasn't already been claimed (It has been claimed if you see someone else's picture on it and it is assigned to someone else, or if you see someone's comment on the issue page saying they are claiming it). Comment on the issue that you have claimed it and will be working on it. An admin will add you as the assignee.
 
 * Step 2: Fork the repo Click the "fork" button in the upper right of the Github repo page. A fork is a copy of the repository that allows you to freely explore & experiment without changing the original project. You can learn more about forking a repo in this article.
@@ -118,17 +121,17 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 
 * Step 6: Pushing your branch and creating a pull request Make sure the tests pass! Run the current test suite with docker-compose exec rails bundle exec rake test If any tests break, be sure to fix them. Make a final commit if you've made more changes to fix the tests. Then, push your branch up and create a pull request. Please indicate which issue your PR addresses in the title.
 
-## Did you fix whitespace, format code, or make a purely cosmetic patch?
+### Did you fix whitespace, format code, or make a purely cosmetic patch?
 Changes that are cosmetic in nature and do not add anything substantial to the stability, functionality, or testability will generally not be accepted.
 
-## Do you intend to add a new feature or change an existing one?
+### Do you intend to add a new feature or change an existing one?
 *	Suggest your change by email to the administrator and start writing code.
 *	Do not open an issue on GitHub until you have collected positive feedback about the change. GitHub issues are primarily intended for bug reports and fixes.
 
 ### Do you have questions about the source code?
 *	Ask any question about how to use whodat by emailing the administrator below.
 
-### Thank you for your interest!
+## Thank you for your interest!
 [Administrator](me@barbaraperlik.com)
 
 ## License
