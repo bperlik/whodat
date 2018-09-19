@@ -29,12 +29,7 @@ RSpec.describe Whodat::UsersController, :type => :controller do
   # Test for http success when issuing post with new_user_attributes
   describe "POST create" do
     it "returns an http redirect" do
-      post :create, :params => { :user => { 
-        name: "TestName",
-        email: "testemail@test.io",
-        password: "password",
-        password_confirmation: "password" } 
-      }
+      post :create, :params => { :user => new_user_attributes }  # Riz recommended
       # post :create, users: new_user_attributes
       expect(response).to redirect_to(root_path)
     end
