@@ -18,7 +18,23 @@ Whodat is
 **** TO DO a detailed outline of the “api” i.e. What methods did you expose for use, and code examples of how to use them.
 
 ## Example Application
-**** TO DO - ADD ONE OR TWO SCREEN CAPS OF DASHBOARD AND PARENT APP
+![nav bar menu](/assets/images/whodat-navbar1.png "Whodat Nav Bar")
+
+User login requirements:
+* name
+* email
+* password 8 to 20 characters in length
+
+Whodat navbar features:
+* user signup
+* user login
+* user logout
+* session[:user_id]
+
+Available helpers:
+* @user.name
+* current_user
+* user_signed_in?
 
 ## Install
 
@@ -47,8 +63,8 @@ rake the the app migration
 rake engineName:install:migrate
 rake db:migrate
 ```
-***** remove above part after making a gem
 
+***** remove above part after making a gem
 
 ## How to Help
 

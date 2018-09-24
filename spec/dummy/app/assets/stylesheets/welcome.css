@@ -1,4 +1,80 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+
+   /* Flexbox stuff */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   /* Text styles */
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+ /* Sizing */
+ width: 100vw;
+ height: 100vh;
+ 
+ /* Flexbox stuff */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ /* Text styles */
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+
+ /* Background styles */
+ background-color: rgb(213, 234, 247);
+}
+
+.hero h1 {
+  /* Text styles */
+  font-size: 4em;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Margins */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.hero .btn {
+  /* Positioning and sizing */
+  display: block;
+  width: 200px;
+  
+  /* Padding and margins */
+  padding: 1em;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Text style */
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+
+  /* Border styles */
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.hero p {
+
+  /* Text styles */
+  font-size: 1.55em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+
+  padding: 1em;
+  margin-top: 1em;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+

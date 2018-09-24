@@ -7,10 +7,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="welcome.css">
   </head>
 
   <body>
-    <%= yield %>
-   </body>
+ 
+    <section class="hero">
+      <div class="hero-inner">
+          <h1>Welcome!</h1>
+          <p>This is the Test App for Whodat authentication gem.<br/><br/>
+          Click below to test the signup/login navbar.<br/>
+          <%= button_to "WHODAT", whodat.dashboard_path, :class=> "btn", :method => :get %> </p>
+
+        <p>You can use the navbar through out your Rails application <br/>
+           OR just to get one quick user and session. <br/>
+           Simple signup, login and logout. <br/>
+           Fast and easy.</p>
+      </section>
+  </body>
 
 </html>

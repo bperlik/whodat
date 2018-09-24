@@ -91,4 +91,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # to use engine helpers in early main app use of engine
+  config.eager_load_paths += %W( #{config.root}/extras )
+  config.eager_load = true  
 end
