@@ -28,17 +28,25 @@ hero {
  font-family: Arial, Helvetica, sans-serif;
 
  /* Background styles */
- background-color: rgb(213, 234, 247);
+ background-color: white;
+}
+
+.hero image_style {
+  float: center; 
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 .hero h1 {
   /* Text styles */
-  font-size: 4em;
+  font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
 
   /* Margins */
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-top: 0em;
+  margin-bottom: .5em;
 }
 
 .hero .btn {
@@ -47,8 +55,8 @@ hero {
   width: 200px;
   
   /* Padding and margins */
-  padding: 1em;
-  margin-top: 50px;
+  padding: .2em;
+  margin-top: .5em; 
   margin-left: auto;
   margin-right: auto;
 
@@ -67,14 +75,26 @@ hero {
 
   /* Text styles */
   font-size: 1.55em;
-  text-align: left;
+  text-align: center;
   color: black;
   text-decoration: none;
 
-  padding: 1em;
-  margin-top: 1em;
+  padding: .2rem;
+  margin-top: .2em;
   margin-left: auto; 
   margin-right: auto;
 }
 
+.hero h3 {
 
+  /* Text styles */
+  font-size: 1.2em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+
+  padding: .5em;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}

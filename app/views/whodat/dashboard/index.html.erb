@@ -1,16 +1,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
-
+ 
   <a> <%= link_to 'Main app', main_app.root_path %> </a>
-  
   <a> <%= link_to 'Signup', new_user_path %> </a>
   <a> <%= link_to 'Login', new_session_path %> </a>
   <% if user_signed_in? %>
     <a> <%= link_to 'Logout', session_path(current_user), data: {confirm: "Are you sure?" }, method: :delete %> </a>
     <div id="username"> You're logged in as <%=current_user.name %> </div>
   <% end %>
-
 
 </div>
 

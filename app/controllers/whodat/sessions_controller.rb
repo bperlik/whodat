@@ -3,8 +3,6 @@ require_dependency "whodat/application_controller"
   module Whodat
     class SessionsController < ApplicationController
 
-     # remember to use helpers, the include statement is in application controller
-
       def new
       end
 

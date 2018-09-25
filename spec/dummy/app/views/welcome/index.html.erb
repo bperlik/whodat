@@ -1,16 +1,18 @@
 
-<h1>Welcome To The Test Dummy App!</h1>
-<p><h2>Click <%= link_to "Whodat", whodat.dashboard_path %> to see the signup/login navbar!</h2></p>
-<br/>
-<br/>
-<h3>You can use the navbar through out your Rails application for simple signup, login and logout. 
-Super fast and easy.
-<div>
-  <ul>
-    <li> Add gem Whodat to your application's Gemfile </li>
-    <Li> Install the gem by running bundle at the command line </li>
-    <li> Add &lt;%= link_to "Whodat", whodat.dashboard_path %&gt; as the link in your index file. </li>
-  </ul>
-</h3>
-
-
+<section class="hero">
+     
+  <div class="hero-inner">
+    <%= image_tag "whodat/whodat-icon.png", :class => "image_style" %>
+         
+    <h1>WELCOME! </h1>
+    <p>This test app will you test Whodat.<br/>
+       Click below use the login navbar.</p>
+          
+    <%= button_to "Start Whodat", whodat.dashboard_path, :class=> "btn", :method => :get %> 
+         
+    <h3>You can use the login navbar through out your Rails application <br/>
+        OR just to get one quick user and session. <br/>
+        Simple signup, login and logout. <br/>
+        Fast and easy, in just few steps. </h3>
+  </div>
+</section>
