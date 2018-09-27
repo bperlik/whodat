@@ -18,27 +18,23 @@ Whodat is
 **** TO DO a detailed outline of the “api” i.e. What methods did you expose for use, and code examples of how to use them.
 
 ## Example Application
-To Run the test main app and see Whodat authentication views:
+Run blogger app and test the Whodat navbar
 
-![nav bar menu](/app/assets/images/whodat/whodat-navbar1.png "Whodat Login Bar")
+![nav bar menu](/app/assets/images/whodat/navbar-pic-readme.png "Whodat Login Bar")
 
 ## Install
-
-1. Add this line to your application's Gemfile:
-```
-group :development do
-   gem 'whodat'
-end
-```
+1. Add this gem to your application's Gemfile:
+`gem 'whodat'`
 
 2. Install the gem at the command line
-` $ bundle install`
+`$ bundle install`
 
-or just add the gem as a dependency
-` $ gem install whodat`
+ or just add the gem as a dependency
+ `$ gem install whodat`
 
-3. Add to your welcome/index view in your app
-` <%= link_to "Whodat", whodat.dashboard_path %> `
+3. To add the navbar partial to any view in your app
+   Add this snippet to your header
+`<%= render partial: "whodat/dashboard/navbar", action: "index" %>`
 
 4. Available objects and methods
    * whodat.user.name 

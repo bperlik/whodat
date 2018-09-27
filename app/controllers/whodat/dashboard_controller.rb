@@ -4,8 +4,9 @@ module Whodat
   class DashboardController < ApplicationController
   #  before_action :authenticate_user!
 
-   def index
-   end
-
+    helper_method :current_user, :user_signed_in?
+    
+    def index
+    end
   end
 end

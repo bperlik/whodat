@@ -2,19 +2,10 @@ module Whodat
   class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
     include SessionsHelper
-
-    helper_method :current_user, :user_signed_in?
-
-    def current_user
-      @current_user ||= Whodat::User.find_by( id: session[:user_id] )
-    end
+    include ApplicationHelper
 
     def authenticate_user!
       redirect_to new_session_path unless current_user
-    end
-
-    def user_signed_in?
-      current_user
     end
 
     def sign_in(user)

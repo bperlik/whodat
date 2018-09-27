@@ -1,16 +1,16 @@
+<%= render partial: "whodat/dashboard/navbar", action: "index" %>
 
 <section class="hero">
      
   <div class="hero-inner">
-    <%= image_tag "whodat/whodat-icon.png", :class => "image_style" %>
+    <%= image_tag "whodat/whodat-logo.png", :class => "image_style" %>
          
-    <h1>WELCOME! </h1>
-    <p>This test app will you test Whodat.<br/>
-       Click below use the login navbar.</p>
+    <h1>WELCOME to Whodat! </h1> <br/>
+    <h2>You can test the user navbar above.</h2>
           
-    <%= button_to "Start Whodat", whodat.dashboard_path, :class=> "btn", :method => :get %> 
+    <%#= button_to "Start Whodat", whodat.dashboard_path, :class=> "btn", :method => :get %> 
          
-    <h3>You can use the login navbar through out your Rails application <br/>
+     <h3>You can use the login navbar through out your Rails application <br/>
         OR just to get one quick user and session. <br/>
         Simple signup, login and logout. <br/>
         Fast and easy, in just few steps. </h3>
