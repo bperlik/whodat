@@ -41,14 +41,14 @@ RSpec.describe Whodat::SessionsController, type: :controller do
 
     it "redirects to the root view" do
       post :create, :params => { :session => { name: my_user.name, email: my_user.email, password: my_user.password } }
-      expect(response).to redirect_to(root_path)
+      expect(response).to redirect_to(main_app.root_path)
     end
   end
 
   describe "DELETE sessions/id" do
     it "render the #welcome view" do
       delete :destroy, :params => { id: (my_user.id) }
-      expect(response).to redirect_to (root_path)
+      expect(response).to redirect_to (main_app.root_path)
     end
 
     it "deletes the user's session" do

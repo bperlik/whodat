@@ -31,7 +31,7 @@ RSpec.describe Whodat::UsersController, :type => :controller do
     it "returns an http redirect" do
       post :create, :params => { :user => new_user_attributes }  # Riz recommended
       # post :create, users: new_user_attributes
-      expect(response).to redirect_to(root_path)
+      expect(response).to redirect_to(main_app.root_path)
     end
 
     # Test that users table increases by one
