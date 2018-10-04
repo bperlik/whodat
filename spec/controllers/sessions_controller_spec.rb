@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+def main_app
+  Rails.application.class.routes.url_helpers
+end
+
+main_app.root_path
+
 RSpec.describe Whodat::SessionsController, type: :controller do
   routes { Whodat::Engine.routes } 
     
