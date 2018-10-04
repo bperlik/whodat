@@ -1,26 +1,18 @@
-# Whodat
-
 ![Whodat logo](whodat-logo-wide.png)
 
-![Travis (.org)](https://travis-ci.org/bperlik/whodat.svg?branch=master)
+![Travis (.org)](https://travis-ci.org/bperlik/whodat.svg?branch=master)  ![Code Climate](https://img.shields.io/codeclimate/maintainability/bperlik/whodat.svg?branch=master)  ![Gem](https://img.shields.io/gem/v/:package.svg)
 
 Whodat is a simple, easy to use, authentication gem for Rails. 
 
 Whodat is 
-
 * An MVC solution built on a Rails engine
 * Uses BCrypt for password encryption
-* Allows a quick easy signup, login and logout
+* Allows a quick easy user authentication, users and sessions
 
 ## Intended Use Case
-**** TO DO see a lengthy explanation of what the intended use case is 
+Whodat is intended to be used for easy and quick access to user and sessions when developing a rails application. When you don't want a lengthy set up, use Whodat. Add the one line responsive dashboard to whatever view you want. The dashboard has a main app button to return the user to the main app index page.
 
-**** TO DO a detailed outline of the “api” i.e. What methods did you expose for use, and code examples of how to use them.
-
-## Example Application
-Run blogger app and test the Whodat navbar
-
-![nav bar menu](/app/assets/images/whodat/navbar-pic-readme.png "Whodat Login Bar")
+![nav bar menu](/app/assets/images/whodat/navbar-pic-readme.png "Whodat Login Dashboard")
 
 ## Install
 1. Add this gem to your application's Gemfile:
@@ -30,17 +22,22 @@ Run blogger app and test the Whodat navbar
 `$ bundle install`
 
  or just add the gem as a dependency
- `$ gem install whodat`
+`$ gem install whodat`
 
-3. To add the navbar partial to any view in your app
-   Add this snippet to your header
+3. To add the user dashboard to any view in your app
+   Add this snippet to add the partial to your header
 `<%= render partial: "whodat/dashboard/navbar", action: "index" %>`
 
-4. Available objects and methods
-   * whodat.user.name 
-   * whodat.session[whodat.user_id]
-   * whodat.user_signed_in?
+4. Available helpers 
    * whodat.current_user
+   * whodat.session[whodat.user. name]  
+   * whodat.user_signed_in?
+
+## Example Application
+Fork, clone and run the server on the Blogger app to test the Whodat navbar. 
+[Blogger](https://github.com/bperlik/blogger)
+
+![Example app](/app/assets/images/whodat/example-app-screencap.png "Example Application")
 
 **** remove this part after making it a gem *******************************
 1. Add inside app config/routes.rb file
@@ -71,9 +68,7 @@ rake db:migrate
 [Read How to Contribute](/HOW-TO-CONTRIBUTE.md)
 
 ### Do you have questions about the source code?
-*	Ask any question about how to use whodat by emailing the administrator below.
-*   Thank you for your interest!
-[Contact the Administrator](me@barbaraperlik.com)
+Thank you for your interest! Ask any question about how to use whodat. [Contact the Administrator](me@barbaraperlik.com)
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
