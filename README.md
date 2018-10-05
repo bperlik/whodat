@@ -68,20 +68,6 @@ user attributes:  id, name, and email
 
 `<%= @class_instance.user.name %>`
 
-**** remove this part after making it a gem *******************************
-1. Add inside app config/routes.rb file
-```
-mount EngineName: : Engine => “/enginename”
-```
-
-2. Be sure to rake the engine migration over to the app and then rake the the app migration
-```
-rake Whodat:install:migrate
-rake db:migrate
-```
-
-***** remove above part after making a gem *********************************
-
 ## How to Help
 
 ### Code of Conduct

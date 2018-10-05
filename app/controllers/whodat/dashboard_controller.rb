@@ -1,5 +1,4 @@
 require_dependency "whodat/application_controller"
-include ApplicationHelper
 
 module Whodat
   class DashboardController < ApplicationController
