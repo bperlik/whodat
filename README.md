@@ -1,6 +1,6 @@
 ![Whodat logo](whodat-logo-wide.png)
 
-![Travis (.org)](https://travis-ci.org/bperlik/whodat.svg?branch=master)  ![Code Climate](https://img.shields.io/codeclimate/maintainability/bperlik/whodat.svg?branch=master)  ![Gem](https://img.shields.io/gem/v/:package.svg)
+![Travis (.org)](https://travis-ci.org/bperlik/whodat.svg?branch=master)  ![Code Climate](https://img.shields.io/codeclimate/maintainability/bperlik/whodat.svg?branch=master)  [![Gem Version](https://badge.fury.io/rb/whodat.svg)](https://badge.fury.io/rb/whodat)
 
 Whodat - A simple, easy to use, authentication gem for Rails
 * An MVC solution built on a Rails engine
@@ -15,11 +15,11 @@ Whodat is intended to be used for easy and quick access to user and sessions whe
 
 ## Example Application
 
-To see Whodat in use, run Blogger app and test out the Whodat user dashboard. 
+To see Whodat in use, run Blogger app and test out the Whodat user dashboard.
 
+[Blogger](https://blogger-bperlik.herokuapp.com)
 
-![Example app](/app/assets/images/whodat/example-app-screencap.png "Example Application")
-
+![Example app](/app/assets/images/whodat/example-app-screencap.png "Dashboard on Blogger app")
 
 ## Install
 
@@ -64,7 +64,7 @@ rake db:migrate
 ```
 
 Now you can refer to Whodat user attributes in your views
-user attributes:  id, name, and email 
+user attributes:  id, name, and email
 
 `<%= @class_instance.user.name %>`
 
@@ -83,8 +83,7 @@ user attributes:  id, name, and email
 
 [Read How to Contribute](/HOW-TO-CONTRIBUTE.md)
 
-After forking, cloning, creating your upstream repo and branch..
-Run the internal "dummy" app to test the engine enter on your command line:
+You can test the engine (after forking, cloning, creating your upstream repo and branch.) run the internal "dummy" app by entering on your command line:
 
 `bin/rails server -b 127.0.0.1`
 
@@ -92,7 +91,9 @@ and open your browser to localhost:3000
 
 ### Do you have questions about the source code?
 Ask any questions about how to use whodat.
+
 Thank you for your interest!
+
 [Contact the Administrator](me@barbaraperlik.com)
 
 ## License
