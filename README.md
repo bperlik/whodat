@@ -17,7 +17,7 @@ Whodat is intended to be used for easy and quick access to user and sessions whe
 
 To see Whodat in use, run Blogger app and test out the Whodat user dashboard.
 
-[Blogger](https://blogger-bperlik.herokuapp.com)
+[Blogger](https://github.com/bperlik/blogger)
 
 ![Example app](/app/assets/images/whodat/example-app-screencap.png "Dashboard on Blogger app")
 

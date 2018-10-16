@@ -4,12 +4,14 @@
 <div class="topnav" id="myTopnav">
  
   <a> <%= link_to 'Main app', main_app.root_path %> </a>
-  <a> <%= link_to 'Signup', whodat.new_user_path %> </a>
-  <a> <%= link_to 'Login', whodat.new_session_path %> </a>
 
+  <% if !user_signed_in? %>>
+    <a> <%= link_to 'Sign Up', whodat.new_user_path %> </a>
+    <a> <%= link_to 'Log In', whodat.new_session_path %> </a>
+  <% end %>
 
   <% if user_signed_in? %>
-    <a> <%= link_to 'Logout', whodat.session_path(current_user), data: {confirm: "Are you sure?" }, method: :delete %> </a>
+    <a> <%= link_to 'Log Out', whodat.session_path(current_user), data: {confirm: "Are you sure?" }, method: :delete %> </a>
     <div id="username"> You're logged in as <%=current_user.name %> </div>
   <% end %>
  

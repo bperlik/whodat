@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Declare your gem's dependencies in whodat.gemspec.
-# Bundler will treat runtime dependencies like base dependencies, and
-# development dependencies will be added by default to the :development group.
 gemspec
 
 # Declare any dependencies that are still in development here instead of in
@@ -15,5 +12,3 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 #
 
-gem 'jquery'
-gem 'jquery-rails'
