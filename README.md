@@ -15,9 +15,7 @@ Whodat is intended to be used for easy and quick access to user and sessions whe
 
 ## Example Application
 
-To see Whodat in use, run Blogger app and test out the Whodat user dashboard.
-
-[Blogger](https://github.com/bperlik/blogger)
+To see Whodat in use, run this demo app, [Blogger](https://blogger-bperlik.herokuapp.com). Test out the Whodat user dashboard.
 
 ![Example app](/app/assets/images/whodat/example-app-screencap.png "Dashboard on Blogger app")
 
@@ -42,8 +40,7 @@ Add this snippet to the header section of your application view
 
 ### To add current_user helper method to your application
 
-   Add this snippet to your main app application controller
-   Then you can use current_user in any controller or view in your app
+   Add this snippet to your main app application controller, then you can use current_user in any controller or view in your app
    
 ```
      helper_method :current_user
@@ -55,18 +52,36 @@ Add this snippet to the header section of your application view
 ### To add user to a class
 
 Add a migration to add user as reference to your table
-`rails g AddUserToYourTableName user:references`
+```
+$ rails g AddUserToYourTableName user:references`
+```
 
 And don't forget to run the migration
 ```
-rake Whodat:install:migrate
-rake db:migrate
+$ rake Whodat:install:migrate
+$ rake db:migrate
 ```
 
 Now you can refer to Whodat user attributes in your views
 user attributes:  id, name, and email
+```
+<%= @class_instance.user.name %>`
+```
 
-`<%= @class_instance.user.name %>`
+### To add one_to_many relationship to your app object
+
+In your app, create a whodat directory in your app/models directory, then create a new file user.rb
+with the following, replacing posts with the objects
+you need to link with a user.
+CAUTION: This overrides the user class in the gem, so use carefully and sparingly.
+
+```
+module Whodat
+   class User < Whodat::ApplicationRecord
+      has_many :posts
+    end
+end
+```
 
 ## How to Help
 

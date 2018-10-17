@@ -5,7 +5,7 @@
  
   <a> <%= link_to 'Main app', main_app.root_path %> </a>
 
-  <% if !user_signed_in? %>>
+  <% if !user_signed_in? %>
     <a> <%= link_to 'Sign Up', whodat.new_user_path %> </a>
     <a> <%= link_to 'Log In', whodat.new_session_path %> </a>
   <% end %>
